@@ -61,6 +61,15 @@ body {
   width: 150px;
   height: 150px;
 }
+.buy-now{
+  
+  background-color: #76b8bd;
+  color: #fff;
+}
+.details{
+  background-color: #dfcf3f;
+  color:#fff;
+}
 .cart {
   width: 350px;
   /* border: 1px solid green; */
