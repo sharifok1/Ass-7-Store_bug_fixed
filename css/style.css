@@ -82,6 +82,9 @@ body {
 .cart-main {
   padding-right: 30px;
 }
+.singleImage{
+  max-width: 200px;
+}
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
