@@ -20,11 +20,11 @@ const showProducts = (products) => {
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h3>${product.title}</h3>
+      <h3>${product.title.slice(0,50)}</h3>
       <p>Category: ${product.category}</p>
       <p>Total Rating: ${product.rating.count}</p>
       <p>Average Rating:${product.rating.rate}</p>
-      <h2>Price: $ ${product.price}</h2>
+      <h3>Price: $ ${product.price}</h3>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn ">add to cart</button>
       <button onClick="detailsProduct(${product.id})" id="details-btn" class="details btn">Details</button></div>
       `;
@@ -94,21 +94,27 @@ const singleView =(data)=>{
   console.log(data)
   const detailsModal = document.getElementById('details-Modal');
   detailsModal.innerHTML= `
-  <div class="card mb-3 mt-4" style="max-width: 540px;">
+  <div class="card mb-3 details-card " style="max-width: 540px;">
   <div class="row g-0">
-    <div class="col-md-5 mt-2">
-      <img src="${data.image}" class="img-fluid rounded-start singleImage" alt="...">
+    <div class="col-md-4">
+      <img src="${data.image}" class="img-fluid rounded-start product-image" alt="...">
     </div>
-    <div class="col-md-7">
+    <div class="col-md-8">
       <div class="card-body">
         <h3 class="card-title">${data.title}</h3>
-        <p class="card-text">Description:${data.description.slice(0,300)}</p>
-        <h2>Price: ${data.price}</h2>
+        <p class="card-text">${data.description.slice(0,200)}</p>
+        <h3>Price: $${data.price}</h3>
       </div>
     </div>
   </div>
 </div>
+  
   `
 }
+
+
+
+
+
 
 
